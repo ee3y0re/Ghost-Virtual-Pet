@@ -16,6 +16,7 @@ Hopefully, you won't be in disbelief or fear over this one! This game allows you
 
 
 ## Wireframes (pending)
+![oh no! unhappy pet :c please make them happy C:](https://github.com/ee3y0re/Ghost-Virtual-Pet/blob/main/wireframes.png)
 
 
 ## Technologies, Libraries, APIs, and Other External Resources
