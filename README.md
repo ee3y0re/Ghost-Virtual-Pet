@@ -15,7 +15,7 @@ Hopefully, you won't be in disbelief or fear over this one! This game allows you
   - Unlock achievements with status reach and grow the ghost to its fullest potential.
 
 
-## Wireframes (pending)
+## Wireframes
 ![oh no! unhappy pet :c please make them happy C:](https://github.com/ee3y0re/Ghost-Virtual-Pet/blob/main/wireframes.png)
 
 
