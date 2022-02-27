@@ -1,5 +1,8 @@
 import {Ghost} from './scripts/ghost';
 
+//this is the security thingy delete after
+// window.Ghost = Ghost;
+
 document.addEventListener('DOMContentLoaded', () => {
 
   //background and game
@@ -25,7 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
   ghost.onload = () => { //begin the drawing
     ctx.drawImage(ghost, 500, 300); //image and position
   }
-
-
-
 });
