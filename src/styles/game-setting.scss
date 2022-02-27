@@ -1,0 +1,20 @@
+#game-container {
+  width: 1000px;
+  height: 567px;
+  position: absolute;
+  // top right bottom left
+  inset: 50% 0px 0px 50%;
+  margin-left: -502px;
+  margin-top: -425px;
+  background-image: url(../../assets/sky_digital_moons.png);
+  background-size: contain;
+  
+}
+
+/*   
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+}
+*/

@@ -1,15 +1,2 @@
-#position-keep {
-  position: absolute;
-  // top right bottom left
-  inset: 50% 0px 0px 50%;
-  margin-left: -502px;
-  margin-top: -380px;
-}
-
-/*   
-canvas {
-  padding: 0;
-  margin: auto;
-  display: block;
-}
-*/
+@import "./styles/game-setting.scss";
+@import "./styles/reset.scss";
