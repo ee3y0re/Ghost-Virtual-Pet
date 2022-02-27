@@ -1,2 +1,11 @@
 @import "./styles/game-setting.scss";
 @import "./styles/reset.scss";
+
+// @font-face {
+//   font-family: 'monogram';
+//   src: url('./styles/monogram.ttf') format('truetype');
+// }
+
+body, button {
+	font-family: 'Courier New', Courier, monospace;
+}
