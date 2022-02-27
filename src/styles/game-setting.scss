@@ -8,7 +8,11 @@
   margin-top: -297px;
 }
 
-
+.game-title {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
 
 #play {
   position: absolute;
