@@ -33,8 +33,8 @@
 }
 
 .menu {
-  left: -66px;
-  align-items: center;
+  align-items: flex-end;
+  left: -86px;
 }
 
 .care {
@@ -43,7 +43,6 @@
 
 .ext-links {
   left: 1002px;
-  align-items: center;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -99,6 +98,11 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "monogram";
+  src: url("./styles/monogram.ttf") format("truetype");
+}
 body, button {
-  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  font-family: "monogram";
 }
