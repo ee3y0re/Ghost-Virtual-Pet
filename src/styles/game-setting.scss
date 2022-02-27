@@ -6,6 +6,38 @@
   inset: 50% 0px 0px 50%;
   margin-left: -502px;
   margin-top: -297px;
+}
+
+#play {
+  position: absolute;
+  z-index: 2;
   background-image: url(../../assets/sky_digital_moons.png);
   background-size: contain;
+  // z-index: auto;
+}
+
+.care, .menu, .ext-links{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-around;
+  height: 100%;
+  z-index: 3;
+}
+
+.menu {
+  // top: 100px;
+  left: -58px;
+  align-items: center;
+}
+
+.care {
+  // top: 100px;
+  left: 100px;
+}
+
+.ext-links {
+  // top: 100px;
+  left: 1000px;
+  align-items: center;
 }
