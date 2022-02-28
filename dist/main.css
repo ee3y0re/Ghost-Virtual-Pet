@@ -24,10 +24,13 @@
   }
 }
 @keyframes linear {
-  from {
+  0% {
     margin-left: -20%;
   }
-  to {
+  5% {
+    margin-left: -20%;
+  }
+  100% {
     margin-left: 20%;
   }
 }
@@ -37,20 +40,20 @@
     transform: translateY(0px);
   }
   25% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   40% {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
   60% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
   70% {
     -webkit-transform: translateY(50px);
-    transform: 80px;
+    transform: 50px;
   }
   100% {
     -webkit-transform: translateY(0px);
@@ -63,20 +66,20 @@
     transform: translateY(0px);
   }
   25% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   40% {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
   60% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
   70% {
     -webkit-transform: translateY(50px);
-    transform: 80px;
+    transform: 50px;
   }
   100% {
     -webkit-transform: translateY(0px);
