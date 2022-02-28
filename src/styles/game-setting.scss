@@ -14,12 +14,88 @@
   justify-content: center;
 }
 
-#play {
+// #play {
+//   position: absolute;
+//   z-index: 2;
+//   background-image: url(../../assets/sky_digital_moons.png);
+//   background-size: contain;
+//   // z-index: auto;
+// }
+
+.ghost {
   position: absolute;
-  z-index: 2;
-  background-image: url(../../assets/sky_digital_moons.png);
-  background-size: contain;
-  // z-index: auto;
+  inset: 50% 0px 0px 50%;
+  z-index: 5;
+  //duration, name, iteration count, direction, variable name
+  -webkit-animation-duration: 4s;
+  -webkit-animation-name: linear, bounce;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  // -webkit-animation: 4s linear infinite alternate side_line;
+  // animation: 4s linear infinite alternate side_line;
+  animation-duration: 4s;
+  animation-name: linear, bounce;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes linear {
+  from { //0%
+    margin-left: -20%; 
+  }
+  to { //100
+    margin-left: 20%; 
+  }
+}
+
+@-webkit-keyframes bounce {
+  25% {
+    -webkit-transform: translateY(0%) rotate(0deg);
+    transform: translateY(0%) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  // 50% {
+  //   //
+  // }
+  75%  {
+    -webkit-transform: translateY(-100px) rotate(720deg);
+    transform: translateY(-100px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+@keyframes linear { 
+  from {
+    margin-left: -20%; 
+  } 
+  to {
+    margin-left: 20%; 
+  }
+}
+
+@keyframes bounce {
+  25% {
+    -webkit-transform: translateY(0%);// rotate(0deg);
+    transform: translateY(0%);// rotate(0deg);
+    // opacity: 1;
+    // border-radius: 0;
+  }
+  // 50% {
+  //   //
+  // }
+  75%  {
+    -webkit-transform: translateY(-100px);// rotate(720deg);
+    transform: translateY(-100px);// rotate(720deg);
+    // opacity: 0;
+    // border-radius: 50%;
+  }
+}
+
+.night-sky {
+    width: 100%;
+    margin: 0px auto;
 }
 
 .care, .menu, .ext-links{
@@ -28,7 +104,7 @@
   position: absolute;
   justify-content: space-around;
   height: 100%;
-  z-index: 3;
+  z-index: 4;
 }
 
 .menu {
