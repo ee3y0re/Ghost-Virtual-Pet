@@ -3,10 +3,38 @@ export {Ghost}
 class Ghost {
   constructor() {
     this.satiety = 10; 
-    this.hygiene = true; 
+    this.hygiene = 10; 
     this.affection = 0; 
   }
 
+  // // v2
+
+  // satietySwitch() {
+  //   if (this.satiety === false) {
+  //     this.satiety = true;
+  //   } else {
+  //     this.satiety = false;
+  //   }
+  // }
+
+  // hygieneSwitch() {
+  //   if (this.hygiene === false) {
+  //     this.hygiene = true;
+  //   } else {
+  //     this.hygiene = false;
+  //   }
+  // }
+
+  // receiveAffection() {
+  //   this.affection += 1;
+  // }
+
+  // neglect() {
+  //   this.affection -= 1;
+  // }
+  
+
+  // //v1
   hungry() {
     this.satiety -= 1;
   }
@@ -15,13 +43,12 @@ class Ghost {
   }
 
   dirty() {
-    this.hygiene -= 1;
+    this.hygiene = 1;
   }
   clean() {
     this.hygiene += 1;
   }
 
-  //i think this will be async
   receiveAffection() {
     this.affection += 1;
   }

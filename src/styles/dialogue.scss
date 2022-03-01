@@ -1,17 +1,18 @@
 .dialogue {
-  position: absolute;
   display: flex;
+  position: absolute;
   z-index: 3;
-  min-height: 125px;
-  align-items: center;
   margin-top: 438px;
+  min-height: 125px;
+  width: 100%;
+  align-items: center;
   color: white;
   background-color: rgba(39,56,116,255);
-  width: 100%;
   text-align: center;
 }
 
-.hunger {
+.dialogue p {
+  margin: 10px;
   width: 100%;
   text-align: center;
 }

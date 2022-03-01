@@ -1,3 +1,210 @@
-.dialogue{position:absolute;display:flex;z-index:3;min-height:125px;align-items:center;margin-top:438px;color:#fff;background-color:#273874;width:100%;text-align:center}.hunger{width:100%;text-align:center}.ghost{position:absolute;inset:50% 0px 0px 50%;z-index:3;-webkit-animation-duration:6s;-webkit-animation-name:linear,bounce;-webkit-animation-iteration-count:infinite;-webkit-animation-direction:alternate;animation-duration:6s;animation-name:linear,bounce;animation-iteration-count:infinite;animation-direction:alternate}@-webkit-keyframes linear{from{margin-left:-20%}to{margin-left:20%}}@keyframes linear{0%{margin-left:-20%}5%{margin-left:-20%}100%{margin-left:20%}}@-webkit-keyframes bounce{0%{-webkit-transform:translateY(0px);transform:translateY(0px)}20%{-webkit-transform:translateY(50px);transform:translateY(50px)}40%{-webkit-transform:translateY(-30px);transform:translateY(-30px)}50%{-webkit-transform:translateY(-50px);transform:translateY(-50px)}70%{-webkit-transform:translateY(-50px);transform:-50px}100%{-webkit-transform:translateY(0px);transform:translateY(0px)}}@keyframes bounce{0%{-webkit-transform:translateY(0px);transform:translateY(0px)}20%{-webkit-transform:translateY(50px);transform:translateY(50px)}40%{-webkit-transform:translateY(-30px);transform:translateY(-30px)}50%{-webkit-transform:translateY(-50px);transform:translateY(-50px)}70%{-webkit-transform:translateY(-50px);transform:-50px}100%{-webkit-transform:translateY(0px);transform:translateY(0px)}}#game-container{width:1000px;height:567px;position:absolute;inset:50% 0px 0px 50%;margin-left:-502px;margin-top:-297px}.game-title{display:flex;position:relative;justify-content:center}.night-sky{width:100%;margin:0px auto;z-index:1}.care,.menu,.ext-links{display:flex;flex-direction:column;position:absolute;justify-content:space-around;height:100%;z-index:2}.menu{align-items:flex-end;left:-86px}.care{left:118px;top:146px;height:34%}.ext-links{left:1002px}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}@font-face{font-family:"monogram";src:url("./styles/monogram.ttf") format("truetype")}body,button{font-size:30px;font-family:"monogram"}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+.dialogue {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  margin-top: 438px;
+  min-height: 125px;
+  width: 100%;
+  align-items: center;
+  color: white;
+  background-color: #273874;
+  text-align: center;
+}
 
-/*# sourceMappingURL=main.css.map*/
+.dialogue p {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.ghost {
+  position: absolute;
+  inset: 50% 0px 0px 50%;
+  z-index: 3;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-name: linear, bounce;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-duration: 6s;
+  animation-name: linear, bounce;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes linear {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 20%;
+  }
+}
+@keyframes linear {
+  0% {
+    margin-left: -20%;
+  }
+  5% {
+    margin-left: -20%;
+  }
+  100% {
+    margin-left: 20%;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  20% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
+  70% {
+    -webkit-transform: translateY(-50px);
+    transform: -50px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  20% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
+  70% {
+    -webkit-transform: translateY(-50px);
+    transform: -50px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+#game-container {
+  width: 1000px;
+  height: 567px;
+  position: absolute;
+  inset: 50% 0px 0px 50%;
+  margin-left: -502px;
+  margin-top: -297px;
+}
+
+.game-title {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.night-sky {
+  width: 100%;
+  margin: 0px auto;
+  z-index: 1;
+}
+
+.care, .menu, .ext-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-around;
+  height: 100%;
+  z-index: 2;
+}
+
+.menu {
+  align-items: flex-end;
+  left: -97px;
+}
+
+.care {
+  left: 118px;
+  top: 146px;
+  height: 34%;
+}
+
+.ext-links {
+  left: 1002px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, button {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  background-color: black;
+}
