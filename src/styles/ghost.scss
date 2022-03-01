@@ -1,6 +1,6 @@
 #ghost {
   position: absolute;
-  inset: 50% 0px 0px 50%;
+  inset: 38% 0px 0px 50%;
   z-index: 4;
   -webkit-animation-duration: 6s;
   -webkit-animation-name: linear, bounce;
@@ -10,6 +10,13 @@
   animation-name: linear, bounce;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+#poop {
+  position: absolute;
+  z-index: 3;
+  top: 289px;
+  left: 581px;
 }
 
 @-webkit-keyframes linear {
