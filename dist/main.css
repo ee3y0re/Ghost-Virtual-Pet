@@ -1,29 +1,28 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-.dialogue {
+#dialogue-container {
   display: flex;
   position: absolute;
   z-index: 3;
-  margin-top: 438px;
+  margin-top: 425px;
   min-height: 125px;
   width: 100%;
   align-items: center;
   color: white;
   background-color: #273874;
-  text-align: center;
 }
 
-.dialogue p {
+#dialogue-container p {
   margin: 10px;
   width: 100%;
   text-align: center;
 }
 
-.ghost {
+#ghost {
   position: absolute;
   inset: 50% 0px 0px 50%;
-  z-index: 3;
+  z-index: 4;
   -webkit-animation-duration: 6s;
   -webkit-animation-name: linear, bounce;
   -webkit-animation-iteration-count: infinite;
@@ -114,6 +113,14 @@
   margin-top: -297px;
 }
 
+#start {
+  position: absolute;
+  z-index: 6;
+  background-color: white;
+  width: 1000px;
+  height: 567px;
+}
+
 .game-title {
   display: flex;
   position: relative;
@@ -124,6 +131,7 @@
   width: 100%;
   margin: 0px auto;
   z-index: 1;
+  height: 549px;
 }
 
 .care, .menu, .ext-links {
@@ -142,12 +150,16 @@
 
 .care {
   left: 118px;
-  top: 146px;
-  height: 34%;
+  top: 118px;
+  height: 43%;
 }
 
 .ext-links {
   left: 1002px;
+}
+
+button {
+  height: 46px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

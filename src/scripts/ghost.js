@@ -38,7 +38,7 @@ class Ghost {
   hungry() {
     this.satiety -= 1;
   }
-  full() {
+  feed() {
     this.satiety += 1;
   }
 

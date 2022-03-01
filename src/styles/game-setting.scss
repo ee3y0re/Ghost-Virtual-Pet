@@ -8,6 +8,14 @@
   margin-top: -297px;
 }
 
+#start {
+  position: absolute;
+  z-index: 6;
+  background-color: white;
+  width: 1000px;
+  height: 567px;
+}
+
 .game-title {
   display: flex;
   position: relative;
@@ -18,6 +26,7 @@
     width: 100%;
     margin: 0px auto;
     z-index: 1;
+    height: 549px;
 }
 
 .care, .menu, .ext-links{
@@ -36,10 +45,14 @@
 
 .care {
   left: 118px;
-  top: 146px;
-  height: 34%;
+  top: 118px;
+  height: 43%;
 }
 
 .ext-links {
   left: 1002px;
+}
+
+button {
+  height: 46px;
 }

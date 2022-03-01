@@ -2,41 +2,64 @@ import {Ghost} from './scripts/ghost';
 
 document.addEventListener('DOMContentLoaded', () => {
   const sassper = new Ghost();
+  const sassperBody = document.getElementById("ghost")
+  const sassperSpeak = document.getElementById("dialogue");
 
-  function getHungry() {
-    return new Promise(sayHunger => {
-      setTimeout(() => {
-        console.log("in getHungry")
-        sassper.hungry();
-        const hungerTag = document.getElementById("hunger")
-        if (hungerTag.innerText === "") {
-          hungerTag.innerText = "That disgusting thing hanging off your nose reminds me of boo-gers. Speaking of which, I'm hungry!";
-        }
-        sassper.testSatiety();
-      }, 3000);
+  // function getHungry() {
+  //   // return new Promise(() => {
+  //     // setTimeout(() => {
+  //       sassper.hungry();
+  //       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big2.png";
+  //       sassperSpeak.innerText = "I thought I was the creepy one lol would you mind stopping your staring and feeding me? xD";
+  //       sassper.testSatiety();
+  //     // }, 10000);
+  //   // });
+  // }
+
+  // async function callHungry() {
+  //   const speak = await getHungry();
+  //   console.log(speak)
+  // }
+
+  function start() {
+    sassperSpeak.innerText = "Click here to start"
+    const startBox = document.getElementById("dialogue-container");
+    startBox.addEventListener('click', event => {
+      sassperSpeak.innerText = ""
+      hungryCycle();
     });
   }
 
-  async function callHungry() {
-    console.log("in callHungry")
-    const speak = await getHungry();
-    console.log(speak)
-  }
+  start();
 
-  //not sure if i need this line
   let hungerID;
 
   function hungryCycle() {
-    console.log("in hungryCycle")
     if (!hungerID) {
-      hungerID = setInterval(callHungry, 30000);
+      hungerID = setInterval(getHungry, 10000);
     }
   }
 
-  // function notHungryAnymore() {
-  //   clearInterval(hungerID);
-  //   hungerID = null;
-  // }
+  function getHungry() {
+    sassper.hungry();
+    sassperBody.src = "./assets/ghost-Sheet-master-blazter-big2.png";
+    sassperSpeak.innerText = "I thought I was the creepy one lol would you mind stopping your staring and feeding me? xD";
+    sassper.testSatiety();
+  }
 
-  hungryCycle();
+  function notHungryAnymore() {
+    clearInterval(hungerID);
+    hungerID = null;
+  }
+
+  const feedButton = document.getElementById("feed");
+  feedButton.addEventListener("click", event => {
+    notHungryAnymore();
+    if (sassper.satiety < 10) {
+      sassper.feed();
+      sassperBody.src = "./assets/ghost-Sheet-master-blazter-big.png";
+      sassperSpeak.innerText = "";
+    }
+    sassper.testSatiety();
+  })
 });

@@ -1,17 +1,17 @@
-.dialogue {
+#dialogue-container {
   display: flex;
   position: absolute;
   z-index: 3;
-  margin-top: 438px;
+  margin-top: 425px;
   min-height: 125px;
   width: 100%;
   align-items: center;
   color: white;
   background-color: rgba(39,56,116,255);
-  text-align: center;
+  // text-align: center;
 }
 
-.dialogue p {
+#dialogue-container p {
   margin: 10px;
   width: 100%;
   text-align: center;

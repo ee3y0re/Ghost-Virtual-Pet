@@ -1,7 +1,7 @@
-.ghost {
+#ghost {
   position: absolute;
   inset: 50% 0px 0px 50%;
-  z-index: 3;
+  z-index: 4;
   -webkit-animation-duration: 6s;
   -webkit-animation-name: linear, bounce;
   -webkit-animation-iteration-count: infinite;
