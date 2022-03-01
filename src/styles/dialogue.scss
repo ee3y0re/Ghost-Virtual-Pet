@@ -1,0 +1,17 @@
+.dialogue {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  min-height: 125px;
+  align-items: center;
+  margin-top: 438px;
+  color: white;
+  background-color: rgba(39,56,116,255);
+  width: 100%;
+  text-align: center;
+}
+
+.hunger {
+  width: 100%;
+  text-align: center;
+}

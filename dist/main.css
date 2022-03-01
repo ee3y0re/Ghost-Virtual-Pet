@@ -1,10 +1,28 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+.dialogue {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  min-height: 125px;
+  align-items: center;
+  margin-top: 438px;
+  color: white;
+  background-color: #273874;
+  width: 100%;
+  text-align: center;
+}
+
+.hunger {
+  width: 100%;
+  text-align: center;
+}
+
 .ghost {
   position: absolute;
   inset: 50% 0px 0px 50%;
-  z-index: 5;
+  z-index: 3;
   -webkit-animation-duration: 6s;
   -webkit-animation-name: linear, bounce;
   -webkit-animation-iteration-count: infinite;
@@ -39,21 +57,21 @@
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  25% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-  40% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  60% {
+  20% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
   70% {
-    -webkit-transform: translateY(50px);
-    transform: 50px;
+    -webkit-transform: translateY(-50px);
+    transform: -50px;
   }
   100% {
     -webkit-transform: translateY(0px);
@@ -65,21 +83,21 @@
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  25% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-  40% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  60% {
+  20% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
   }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
   70% {
-    -webkit-transform: translateY(50px);
-    transform: 50px;
+    -webkit-transform: translateY(-50px);
+    transform: -50px;
   }
   100% {
     -webkit-transform: translateY(0px);
@@ -104,6 +122,7 @@
 .night-sky {
   width: 100%;
   margin: 0px auto;
+  z-index: 1;
 }
 
 .care, .menu, .ext-links {
@@ -112,7 +131,7 @@
   position: absolute;
   justify-content: space-around;
   height: 100%;
-  z-index: 4;
+  z-index: 2;
 }
 
 .menu {
@@ -121,7 +140,9 @@
 }
 
 .care {
-  left: 100px;
+  left: 118px;
+  top: 146px;
+  height: 34%;
 }
 
 .ext-links {

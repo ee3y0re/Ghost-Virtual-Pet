@@ -1,14 +1,11 @@
 .ghost {
   position: absolute;
   inset: 50% 0px 0px 50%;
-  z-index: 5;
-  //duration, name, iteration count, direction, variable name
+  z-index: 3;
   -webkit-animation-duration: 6s;
   -webkit-animation-name: linear, bounce;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
-  // -webkit-animation: 4s linear infinite alternate side_line;
-  // animation: 4s linear infinite alternate side_line;
   animation-duration: 6s;
   animation-name: linear, bounce;
   animation-iteration-count: infinite;
@@ -41,21 +38,21 @@
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  25% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px)
-  }
-  40%  {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  60% {
+  20% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px)
   }
+  40%  {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px)
+  }
   70%{
-    -webkit-transform: translateY(50px);
-    transform: 50px;
+    -webkit-transform: translateY(-50px);
+    transform: -50px;
   }
   100% {
     -webkit-transform: translateY(0px);
@@ -68,21 +65,21 @@
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
   }
-  25% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px)
-  }
-  40%  {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  60% {
+  20% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px)
   }
+  40%  {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px)
+  }
   70%{
-    -webkit-transform: translateY(50px);
-    transform: 50px;
+    -webkit-transform: translateY(-50px);
+    transform: -50px;
   }
   100% {
     -webkit-transform: translateY(0px);
