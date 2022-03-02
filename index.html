@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./dist/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Press+Start+2P&display=swap" rel="stylesheet">
   <!-- js scripts -->
   <script src="./dist/main.js"></script>
   <!-- pictures -->
@@ -17,38 +17,45 @@
 
 </head>
 <body>
-  <div id="game-container">
+  <main id="game-container">
     <h1 class="game-title">Sassper the Sassy Ghost</h1>
     
     <ul class="care">
-      <li><button id="feed">Feed</button></li>
-      <li><button id="clean">Clean</button></li>
-      <li><button id="love">Love</button></li>
-      <li><button id="protect">Protect</button></li>
+      <li><button id="feed">Deadfruit</button></li>
+      <li><button id="clean">Wishy Washy</button></li>
+      <li><button id="love">Haunting Hug</button></li>
+      <li><button id="protect">Spooky Shelter</button></li>
     </ul>
 
-    <ul class="menu">
-      <li><button>Menu</button></li>
-      <li><button>Sound</button></li>
-      <li><button>Medals</button></li>
-      <li><button>Info</button></li>
-    </ul>
-    
-    <ul class="ext-links">
-      <li><button>Github</button></li>
-      <li><button>LinkedIn</button></li>
-    </ul>
+    <nav class="left-side-menu">
+      <ul class="menu">
+        <li><button>Menu</button></li>
+        <li><button>Sound</button></li>
+        <li><button>Medals</button></li>
+        <li><button>Info</button></li>
+      </ul>
+    </nav>
+
+    <nav class="right-side-menu">
+      <ul class="ext-links">
+
+        <li><a href="https://github.com/ee3y0re">
+          <button>Github</button>
+        </a></li>
+        <li><button>LinkedIn</button></li>
+      </ul>
+    </nav>
 
     <div id="dialogue-container">
       <p id="dialogue"></p>
     </div>
 
-    <img id="poop" src="">
-    <img id="ghost" src="./assets/ghost-Sheet-master-blazter-big.png">
+    <img aria-label="star poop" id="poop" src="">
+    <img aria-label="ghost pet" id="ghost" src="./assets/ghost-Sheet-master-blazter-big.png" alt="ghost pet">
 
-    <img class="night-sky" src="./assets/sky_digital_moons.png">
+    <img aria-label="star background" class="night-sky" src="./assets/sky_digital_moons.png" alt="this is the sky background home of the ghost pet">
 
-  </div>   
+  </main>   
   
 </body>
 </html>

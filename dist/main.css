@@ -14,6 +14,7 @@
 }
 
 #dialogue-container p {
+  cursor: pointer;
   margin: 10px;
   width: 100%;
   text-align: center;
@@ -148,9 +149,9 @@
 }
 
 .care {
-  left: 118px;
+  left: 62px;
   top: 118px;
-  height: 43%;
+  height: 50%;
 }
 
 .ext-links {
@@ -159,6 +160,27 @@
 
 button {
   height: 46px;
+}
+
+.care button:hover {
+  background-color: pink;
+  color: black;
+}
+
+#feed:hover {
+  cursor: url("../../assets/dragonfruit_ssugmi.png"), auto;
+}
+
+#clean:hover {
+  cursor: url("../../assets/toilet-paper.png"), auto;
+}
+
+#love:hover {
+  cursor: url("../../assets/heart-nicole-mt.png"), auto;
+}
+
+#protect:hover {
+  cursor: url("../../assets/bubble-shield.png"), auto;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
