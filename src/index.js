@@ -1,29 +1,60 @@
 import {Ghost} from './scripts/ghost';
+import {Background} from './scripts/background';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  //some constants that will be shared by the functions
+  const newGame = new Background;
   const sassper = new Ghost();
+  const themeMusic = document.getElementById('theme-music');
+  var soundPlaying = false;
   const sassperBody = document.getElementById("ghost");
   const sassperSpeak = document.getElementById("dialogue");
   const sassperPoop = document.getElementById("poop");
+  // const angryGhost = document.getElementById("angry-ghost")
 
+  //general start to give you time to rehydrate, use the bathroom, call that person you've been thinking of calling
   function start() {
     if (sassper.satiety === false) sassper.satietySwitch();
     sassperSpeak.innerText = "Click here to start"
     const startBox = document.getElementById("dialogue-container");
     startBox.addEventListener('click', event => {
+      themeMusic.play()
+      soundPlaying = true;
+      newGame.start = true;
       sassperSpeak.innerText = ""
       hungryCycle();
     });
   }
 
+  const soundButton = document.getElementById('sound');
+  soundButton.addEventListener("click", ()=> {
+    if (soundPlaying) {
+      themeMusic.pause();
+      soundPlaying = false;
+    } else {
+      themeMusic.play();
+      soundPlaying = true;
+    }
+  })
+
+  // function restartGhost() {
+  //   notHungryAnymore();
+  //   stopPoop();
+  //   sassperBody.src = "./assets/ghost-Sheet-master-blazter-big.png";
+  //   sassperPoop.src = ""
+  //   sassperSpeak.innerText = "";
+  //   sassper.resetMoods;
+  // }
+
   start();
 
+  //let the hunger begin!
   let hungerID;
 
   function hungryCycle() {
     if (!hungerID) {
-      hungerID = setInterval(getHungry, 6000);
+      hungerID = setInterval(getHungry, 7000);
     }
   }
 
@@ -32,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big2.png";
       sassperSpeak.innerText = "I thought I was the creepy one LOL Would you mind stopping your staring and feeding me? xD";
       sassper.satietySwitch(); //false
-      sassper.testSatiety();
     }
   }
 
@@ -48,22 +78,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sassper.satiety === false) {
       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big.png";
       sassperSpeak.innerText = "";
-      sassper.satietySwitch(); //true
       makePoop()
+      sassper.satietySwitch(); //true
     }
   })
 
-  function makePoop() {
-    setTimeout(()=> {
-      if (sassper.hygiene === true) {
-        sassper.hygieneSwitch(); //false
-        sassperBody.src = "./assets/ghost-Sheet-master-blazter-colllapse.png"
-        sassperSpeak.innerText = "What? I'm a ghost! You've got hands, go clean up the star poop :P"
-        sassperPoop.src = "./assets/star_nyknck.png"
-      }
-    }, 5000)
+  //good food means good poop
 
+  // let poopID;
+
+  function makePoop() {
+    // if (!poopID) {
+      // poopID = 
+      setTimeout(() => {
+        if (sassper.hygiene === true) {
+          sassper.hygieneSwitch(); //false
+          sassperBody.src = "./assets/ghost-Sheet-master-blazter-colllapse.png"
+          sassperSpeak.innerText = "What? I'm a ghost! You've got hands, go clean up the star poop :P"
+          sassperPoop.src = "./assets/star_nyknck.png"
+
+          // sassper.testHygiene();
+        }
+      }, 7000)
+    // }
   }
+
+  // function stopPoop() {
+  //   clearTimeout(poopID);
+  //   poopID = null;
+  // }
 
   const cleanButton = document.getElementById("clean");
   cleanButton.addEventListener("click", event => {
@@ -72,13 +115,24 @@ document.addEventListener('DOMContentLoaded', () => {
       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big.png";
       sassperSpeak.innerText = "";
       sassperPoop.src = ""
-      setTimeout(getHungry, 6000)
+      setTimeout(getHungry, 7000)
       sassper.hygieneSwitch(); //true
     }
   })
 
-  const affectionButton = document.getElementById("love");
-  affectionButton.addEventListener("click", event => {
-    sassperSpeak.innerText = "";
-  })
+  //tundere love
+  // const affectionButton = document.getElementById("love");
+  // affectionButton.addEventListener("click", event => {
+  //   //figure out how to stop all timeouts and restart them
+  //   if (sassper.affection >= 4 && sassper.satiety && sassper.hygiene) {
+  //     sassperBody.src = "./assets/ghost-sheet-blushie-edit.png"
+  //     sassperSpeak.innerText = "It's not like I thought that hug was phantasmic, BOO-KA!"
+  //   }
+  // });
+
+  // protect from AHH IT BURNS
+  // const protectButton = document.getElementById("protect");
+  // protectButton.addEventListener("click", event => {
+  //   sassperSpeak.innerText = "Will Abby make this button before the Thursday presentation deadline? Tune in next time time for ABBY'S ABSOLUTELY subpAAHHHHR APP"
+  // })
 });

@@ -12,6 +12,13 @@
   animation-direction: alternate;
 }
 
+#angry-ghost {
+  position: absolute;
+  z-index: 5;
+  top: -476px;
+  left: -410px;
+}
+
 #poop {
   position: absolute;
   z-index: 3;

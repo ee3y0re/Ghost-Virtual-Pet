@@ -27,6 +27,11 @@ class Ghost {
     this.affection += 1;
   }
 
+  resetMoods() {
+    this.satiety = true;
+    this.hygiene = true;
+  }
+
   //test methods
 
   testSatiety() {
