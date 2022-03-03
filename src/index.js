@@ -118,16 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let prevSpeak = sassperSpeak.innerText;
     let prevBody = sassperBody.src;
     themeMusic.pause();
-    scaryMusic.volume = 0.10;
+    scaryMusic.volume = 0.15;
     scaryMusic.play();
     angryGhost.src = "./assets/ghost-Sheet-master-blazter-big-inyoface.png";
     setTimeout(()=>{
+      themeMusic.play();
       angryGhost.src = "";
-      sassperSpeak.innerText = "Let's respect boundaries and try that again shall we?";
+      sassperSpeak.innerText = "Let's respect rules and try a different button, shall we?";
       setTimeout(()=>{
         sassperSpeak.innerText = prevSpeak;
         sassperBody.src = prevBody;
       }, 5000)
-    }, 3000)
+    }, 6000)
   })
 });
