@@ -31,9 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const soundButton = document.getElementById('sound');
   soundButton.addEventListener("click", () => {
     if (themeMusicPlaying) {
+      soundButton.innerText = "Unmute";
       themeMusic.pause();
       themeMusicPlaying = false;
     } else {
+      soundButton.innerText = "Mute"
       themeMusic.play();
       themeMusicPlaying = true;
     }
@@ -120,8 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
     themeMusic.pause();
     scaryMusic.volume = 0.15;
     scaryMusic.play();
+
     angryGhost.src = "./assets/ghost-Sheet-master-blazter-big-inyoface.png";
     setTimeout(()=>{
+      soundButton.innerText = "Mute"
       themeMusic.play();
       angryGhost.src = "";
       sassperSpeak.innerText = "Let's respect rules and try a different button, shall we?";

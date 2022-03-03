@@ -5,10 +5,15 @@
 @import "./styles/game-setting.scss";
 @import "./styles/reset.scss";
 
+h1, h2 {
+  font-family: 'Press Start 2P', cursive;
+}
+
 body {
   font-family: 'Lexend', sans-serif;
   color: white;
   background-color: black;
+  padding: 1px;
 }
 
 summary, ul {

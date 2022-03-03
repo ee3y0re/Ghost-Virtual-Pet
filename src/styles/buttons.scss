@@ -1,20 +1,28 @@
 button {
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
   height: 46px;
   color: white;
-  background-color: black;
+  background-color: #26396e;
+  padding: 10px;
+  border-radius: 12px;
+  table-layout: fixed;
 }
 
-.menu button:hover, .ext-links button:hover {
-  background-color: white;
-  color: black;
+.care button {
+  width: 220px;
+}
+
+.menu button, .ext-links button{
+  width: 129px;
+}
+
+.menu button:hover, .ext-links button:hover, .care button:hover {
+  background-color: #5a6797;
+  color: white;
   cursor: pointer;
 }
 
-.care button:hover {
-  background-color: pink;
-  color: black;
-
-}
 #feed:hover{
   cursor: url("../../assets/dragonfruit_ssugmi.png"), auto;
 }

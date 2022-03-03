@@ -46,6 +46,7 @@
         <li><div class="help-dropdown">
           <button onclick="dropMenu()" class="help-button">Help</button>
           <div id="myHelp" class="help-info">
+            <p id="exit-help">X</p>
             <ul>
             <li>Your task is to attend to the needs and whims of the Sassper... or else...</li> 
             <br>
@@ -65,8 +66,12 @@
 
           <script>
             function dropMenu() {
-              document.getElementById("myHelp").classList.toggle("show")
+              document.getElementById("myHelp").classList.toggle("show");
             }
+
+            document.getElementById("exit-help").addEventListener("click", () =>{
+              document.getElementById("myHelp").classList.toggle("show");
+            });
           </script>
 
         </div></li>
@@ -75,6 +80,7 @@
         <li><div class="credits-dropdown">
           <button onclick="dropCredits()" class="credits-button">Credits</button>
           <div id="myThanks" class="credits-info">
+            <p id="exit-credits">X</p>
             <ul>
               <li>Acknowledgments</li>
               <br>
@@ -96,11 +102,6 @@
                   https://www.partnersinrhyme.com/soundfx/scary_halloween_sounds/voorheez3_wav.shtml
                 </a>
               </li>
-              <!-- <br>
-              <li>Sliced fruit By ssugmi</li>
-              <li>Link: https://ssugmi.itch.io/sliced-fruits</li>
-              <li>License : Creative Commons BY 4.0 (CCBY4.0)</li>
-              -->
               <br> 
               <li>Ghost Sprite Pack by Master Blaster</li>
               <li>Link: 
@@ -115,14 +116,6 @@
                   https://nyknck.itch.io/staranimation
                 </a>
               </li>
-              <!-- <br>
-              <li>Toilet Paper</li>
-              <li>Link: https://www.hiclipart.com/free-transparent-background-png-clipart-qbxoq</li>
-              <li>License: Non-Commercial Use</li>
-              <br> -->
-              <!-- <li>Pixel Heart by Nicole Marie T</li>
-              <li>Link: https://nicolemariet.itch.io/pixel-heart-animation-32x32-16x16-freebie</li>
-              -->
               <br> 
               <li>Reviving of Sassper the Sassy Ghost by Disnee Tamang</li>
               <br>
@@ -133,8 +126,12 @@
 
           <script>
             function dropCredits() {
-              document.getElementById("myThanks").classList.toggle("show")
+              document.getElementById("myThanks").classList.toggle("show");
             }
+
+            document.getElementById("exit-credits").addEventListener("click", () => {
+              document.getElementById("myThanks").classList.toggle("show");
+            });
           </script>
 
         </div></li>
