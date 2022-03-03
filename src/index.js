@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function start() {
     if (sassper.satiety === false) sassper.satietySwitch();
-    sassperSpeak.innerText = "Click here to start"
+    sassperSpeak.innerText = "START"
     const startBox = document.getElementById("dialogue-container");
     startBox.addEventListener('click', event => {
       themeMusic.play()
