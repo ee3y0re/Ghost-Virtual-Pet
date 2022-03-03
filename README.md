@@ -3,6 +3,8 @@
 ## Do you believe in ghosts?
 Hopefully, you won't be in disbelief or fear over this one! This game allows you to feed, clean, pet (sorta), and shelter a sassy little ghost. The catch is, can you be a loving parent even with its cheeky language and transmissible nature? Neglect comes with consequences, so it’s important to remain alert to this ghost’s needs. Raise its stats high enough by carefully clicking commands to interact with it to help it grow to its fullest potential.
 
+## Check it out:
+https://ee3y0re.github.io/Sassper-the-Sassy-Ghost/
 
 ## Functionality and MVPs
 - Use mouse clicks on the fruit icon fruit icon for feeding.
