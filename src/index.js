@@ -3,24 +3,25 @@ import { Background } from './scripts/background';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  //some constants that will be shared by the functions
   const newGame = new Background;
   const sassper = new Ghost();
   const themeMusic = document.getElementById('theme-music');
-  var soundPlaying = false;
+  var themeMusicPlaying = false;
+  const scaryMusic = document.getElementById('scary-sound');
   const sassperBody = document.getElementById("ghost");
   const sassperSpeak = document.getElementById("dialogue");
   const sassperPoop = document.getElementById("poop");
-  // const angryGhost = document.getElementById("angry-ghost")
+  const angryGhost = document.getElementById("angry-ghost")
 
-  //general start to give you time to rehydrate, use the bathroom, call that person you've been thinking of calling
+
+
   function start() {
     if (sassper.satiety === false) sassper.satietySwitch();
     sassperSpeak.innerText = "Click here to start"
     const startBox = document.getElementById("dialogue-container");
     startBox.addEventListener('click', event => {
       themeMusic.play()
-      soundPlaying = true;
+      themeMusicPlaying = true;
       newGame.start = true;
       sassperSpeak.innerText = ""
       hungryCycle();
@@ -29,18 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const soundButton = document.getElementById('sound');
   soundButton.addEventListener("click", () => {
-    if (soundPlaying) {
+    if (themeMusicPlaying) {
       themeMusic.pause();
-      soundPlaying = false;
+      themeMusicPlaying = false;
     } else {
       themeMusic.play();
-      soundPlaying = true;
+      themeMusicPlaying = true;
     }
   });
 
   start();
 
-  //let the hunger begin!
+  
+
   let hungerID;
 
   function hungryCycle() {
@@ -74,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
+  
 
   function makePoop() {
     setTimeout(() => {
@@ -98,13 +101,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  //tundere love
+
+
   const affectionButton = document.getElementById("love");
   affectionButton.addEventListener("click", event => {
-  //   //figure out how to stop all timeouts and restart them
     if (sassper.affection >= 4 && sassper.satiety && sassper.hygiene) {
       sassperBody.src = "./assets/ghost-sheet-blushie-edit.png"
       sassperSpeak.innerText = "It's not like I thought that hug was phantasmic, BOO-KA!"
     }
   });
+
+
+
+  const forbiddenButton = document.getElementById("forbidden");
+  forbiddenButton.addEventListener("click", event => {
+    let prevSpeak = sassperSpeak.innerText;
+    let prevBody = sassperBody.src;
+    themeMusic.pause();
+    scaryMusic.volume = 0.05;
+    scaryMusic.play();
+    angryGhost.src = "./assets/ghost-Sheet-master-blazter-big-inyoface.png";
+    setTimeout(()=>{
+      angryGhost.src = "";
+      sassperSpeak.innerText = "Let's respect boundaries and try that again shall we?";
+      setTimeout(()=>{
+        sassperSpeak.innerText = prevSpeak;
+        sassperBody.src = prevBody;
+      }, 5000)
+    }, 3000)
+  })
 });
