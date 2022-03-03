@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let prevSpeak = sassperSpeak.innerText;
     let prevBody = sassperBody.src;
     themeMusic.pause();
-    scaryMusic.volume = 0.05;
+    scaryMusic.volume = 0.10;
     scaryMusic.play();
     angryGhost.src = "./assets/ghost-Sheet-master-blazter-big-inyoface.png";
     setTimeout(()=>{
