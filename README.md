@@ -79,7 +79,6 @@ This game uses mouse clicks.
 - More sassy ghost puns
 
 ## Acknowledgments
-Acknowledgments
 
 > - Magic Scout Cottages by Kevin MacLeod
 > - Link: https://incompetech.filmmusic.io/song/4672-magic-scout-cottages
