@@ -1,53 +1,100 @@
 # Sassper, the Sassy Ghost
 
+
 ## Do you believe in ghosts?
 Hopefully, you won't be in disbelief or fear over this one! This game allows you to feed, clean, pet (sorta), and shelter a sassy little ghost. The catch is, can you be a loving parent even with its cheeky language and transmissible nature? Neglect comes with consequences, so it’s important to remain alert to this ghost’s needs. Raise its stats high enough by carefully clicking commands to interact with it to help it grow to its fullest potential.
 
-## Check it out:
+
+## Live Link:
 https://ee3y0re.github.io/Sassper-the-Sassy-Ghost/
 
-## Functionality and MVPs
-- Use mouse clicks on the fruit icon fruit icon for feeding.
-- Click on the ghosts droppings after clicking the trash icon for cleaning.
-- Even this ghost loves cuddles, so click directly to pet.
-- Experience different weather states and have the option to respond and shelter the pet.
-- Modify the settings of the game through the icons on the left of the screen
-  - Resetting the game or muting and unmuting the sound
-  - See more information about the game through the About modal
-  - Unlock achievements with status reach and grow the ghost to its fullest potential.
+
+## How to Play
+This game uses mouse clicks.
+> Your task is to attend to the needs and whims of the Sassper... or else...
+> 
+> Just kidding~ (maybe?)
+> 
+> When the ghost gets hangry, feed the ghost deadfruit.
+> 
+> To clean the ghost, wishy washy away the poop! (Yes, ghosts poop stars. Don't you believe in Santa Claus?)
+> 
+> Ghosts like to get to know you before hugging, so check back for a hug periodically.
+> 
+> Also...don't click on the last button C;
+
+<!-- ## Wireframes
+![oh no! unhappy pet :c please make them happy C:](https://github.com/ee3y0re/Ghost-Virtual-Pet/blob/main/wireframes.png) -->
 
 
-## Wireframes
-![oh no! unhappy pet :c please make them happy C:](https://github.com/ee3y0re/Ghost-Virtual-Pet/blob/main/wireframes.png)
-
-
-## Technologies, Libraries, APIs, and Other External Resources
-- Sprite packages from Itch.io will be used for the icons and virtual pet supplies and to bring the virtual pet to life.
+## Technologies and Resources
+- Game assets from Itch.io
 - Webpack to manage and bundle the Javascript files of this project.
 - NPM for organizing project dependencies and helping reduce conflicts.
-- My tears ; u ;
 
 
-## Implementation Timeline
-**Friday**
-- Set up web pack and folder files
-- Begin creating classes for background with its weather properties and ghost with its health properties
-- Render classes and icons onto browser by linking images on the html
+## Technical Implementation Details
+ - My favorite button personally is the "Don't Click Me Button." But that's a surprise~
+ - Asynchronous functions for timing feeding and cleaning states
 
-**Saturday and Sunday**
-- Create asynchronous functions and whatever code is needed to simulate maintenance of ghost’s health state
-- Render text according to it’s health state
-- Add click events to enable usage of icons to care for ghost and change health properties accordingly
-- Code animations for ghost to collapse and inflate in response to care and neglect and to be able to move throughout the screen
+        let hungerID;
 
-**Monday**
-- All about menus
-- Create classes, render icons, and code out logic
+        function hungryCycle() {
+          if (!hungerID) {
+            hungerID = setInterval(getHungry, 7000);
+          }
+        }
 
-**Tuesday and Wednesday**
-- Test playthrough
-- Modify accordingly
-- Repeat until realistically satisfied
+        function getHungry() {
+          if (sassper.satiety === true) {
+            sassperBody.src = "./assets/ghost-Sheet-master-blazter-big2.png";
+            sassperSpeak.innerText = "I thought I was the creepy one LOL Would you mind stopping your staring and feeding me? xD";
+            sassper.satietySwitch();
+          }
+        }
 
-**Thursday**
-- Rewrite production if time permits
+        function notHungryAnymore() {
+          clearInterval(hungerID);
+          hungerID = null;
+        }
+
+        const feedButton = document.getElementById("feed");
+        feedButton.addEventListener("click", event => {
+          notHungryAnymore();
+          if (sassper.satiety === false) {
+            sassper.receiveAffection();
+            sassperBody.src = "./assets/ghost-Sheet-master-blazter-big.png";
+            sassperSpeak.innerText = "";
+            makePoop()
+            sassper.satietySwitch();
+          }
+        })
+
+
+## To-Dos and Future Features
+- Add a status gauge to see how the ghost is feeling
+- Level ups to work up to for new ghost animations and moods
+- Winning, final stage of the ghost's development
+- Toggle button for accessibility theme
+- Improved timing of asynchronous functions and clearing away spotted bugs
+- Improved feedback system of correct and incorrect button selection
+- More sassy ghost puns
+
+## Acknowledgments
+
+> - Magic Scout Cottages by Kevin MacLeod
+> - Link: https://incompetech.filmmusic.io/song/4672-magic-scout-cottages
+> - License: https://filmmusic.io/standard-license
+>
+> - Vorheez 3 Sound Effect
+> - Link: https://www.partnersinrhyme.com/soundfx/scary_halloween_sounds/voorheez3_wav.shtml
+>
+> - Ghost Sprite Pack by Master Blaster
+> - Link: https://master-blazter.itch.io/ghostspritepack
+>
+> - Star Animation by nyknck
+> - Link: https://nyknck.itch.io/staranimation
+>
+> - Reviving of Sassper the Sassy Ghost by Disnee Tamang
+>
+> - Love, support, MS Paint edits, and idea contribution to the "Don't Click Me" button from Chef P.
