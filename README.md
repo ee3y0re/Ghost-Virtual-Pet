@@ -75,6 +75,7 @@ This game uses mouse clicks.
 - Add a status gauge to see how the ghost is feeling
 - Level ups to work up to for new ghost animations and moods
 - Winning, final stage of the ghost's development
+- Toggle button for accessibility theme
 - Improved timing of asynchronous functions and clearing away spotted bugs
 - More sassy ghost puns
 
