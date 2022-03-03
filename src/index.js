@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function getHungry() {
     if (sassper.satiety === true) {
       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big2.png";
-      sassperSpeak.innerText = "I thought I was the creepy one LOL Would you mind stopping your staring and feeding me? xD";
+      sassperSpeak.innerText = "I thought I was the creepy one LOL Would you mind stopping your staring and feed me? xD";
       sassper.satietySwitch();
     }
   }
