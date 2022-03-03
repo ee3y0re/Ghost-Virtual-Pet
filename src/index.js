@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sassper.satiety === true) {
       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big2.png";
       sassperSpeak.innerText = "I thought I was the creepy one LOL Would you mind stopping your staring and feeding me? xD";
-      sassper.satietySwitch(); //false
+      sassper.satietySwitch();
     }
   }
 
@@ -68,15 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const feedButton = document.getElementById("feed");
   feedButton.addEventListener("click", event => {
-    sassper.receiveAffection();
     notHungryAnymore();
     if (sassper.satiety === false) {
+      sassper.receiveAffection();
       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big.png";
       sassperSpeak.innerText = "";
-      makePoop()
-      sassper.satietySwitch(); //true
+      makePoop();
+      sassper.satietySwitch();
     }
-  })
+  });
 
   
 
@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cleanButton = document.getElementById("clean");
   cleanButton.addEventListener("click", event => {
-    sassper.receiveAffection();
     if (sassper.hygiene === false) {
+      sassper.receiveAffection();
       sassperBody.src = "./assets/ghost-Sheet-master-blazter-big.png";
       sassperSpeak.innerText = "";
       sassperPoop.src = ""
