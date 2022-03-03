@@ -77,6 +77,7 @@ This game uses mouse clicks.
 - Winning, final stage of the ghost's development
 - Toggle button for accessibility theme
 - Improved timing of asynchronous functions and clearing away spotted bugs
+- Improved feedback system of correct and incorrect button selection
 - More sassy ghost puns
 
 ## Acknowledgments
