@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Press+Start+2P&display=swap" rel="stylesheet">
   <!-- music -->
-  <audio id="theme-music" src="./assets/magic-scout-cottages-by-kevin-macleod-from-filmmusic-io.mp3" preload="auto"></audio>
   <!-- js scripts -->
   <script src="./dist/main.js"></script>
   <!-- pictures -->
@@ -20,6 +19,8 @@
 
 </head>
 <body>
+  <audio id="theme-music" src="./assets/magic-scout-cottages-by-kevin-macleod-from-filmmusic-io.mp3"
+    preload="auto"></audio>
   <main id="game-container">
     <h1 class="game-title">Sassper the Sassy Ghost</h1>
 
@@ -28,24 +29,91 @@
         <li><button id="feed">Deadfruit</button></li>
         <li><button id="clean">Wishy Washy</button></li>
         <li><button id="love">Haunting Hug</button></li>
-        <li><button id="protect">Spooky Shelter</button></li>
+        <li><button id="forbidden">Don't Click Me</button></li>
       </ul>
     </section>
 
-
     <nav class="left-side-menu">
       <ul class="menu">
-        <li><button id="help">Help</button></li>
+        <li><div class="help-dropdown">
+          <button onclick="dropMenu()" class="help-button">Help</button>
+          <div id="myHelp" class="help-info">
+            <ul>
+            <li>Your task is to attend to the needs and whim of the undead... or else...</li> 
+            <br>
+            <li>Just kidding~ (maybe?)</li>
+            <br>
+            <li>When the ghost gets hangry, feed the ghost deadfruit.</li> 
+            <br>
+            <li>To clean the ghost, wishy washy away the poop! (Yes, ghosts poop stars. Don't you believe in Santa Claus?)</li> 
+            <br>
+            <li>Level up your basic bonding with the ghost to be able to finally show affection~</li> 
+            <br>
+            <li>Just remember, ghosts are very territorial so be very weary of trying to hug a phantom that's never met you before.</li> 
+            <br>
+            <!-- <li>Finally, PROTECT THE GHOST FROM THE RAYS OF THE SUN! UVB rays are the rays that burn and that causes skin cancer.</li> 
+            <br>
+            <li>(Although the ghost no longer has skin, play along and you're in for a great surprise!)</li>  -->
+            </ul>
+          </div>
+
+          <script>
+            function dropMenu() {
+              document.getElementById("myHelp").classList.toggle("show")
+            }
+          </script>
+
+        </div></li>
+        
         <li><button id="sound">Sound</button></li>
-        <li><button id="medals">Medals</button></li>
-        <li><button id="credits">Credits</button></li>
+        <li><div class="credits-dropdown">
+          <button onclick="dropCredits()" class="credits-button">Credits</button>
+          <div id="myThanks" class="credits-info">
+            <ul>
+              <li>Acknowledgments</li>
+              <br>
+              <li>Magic Scout Cottages by Kevin MacLeod</li>
+              <li>Link: https://incompetech.filmmusic.io/song/4672-magic-scout-cottages</li>
+              <li>License: https://filmmusic.io/standard-license</li>
+              <br>
+              <li>Sliced fruit By ssugmi</li>
+              <li>Link: https://ssugmi.itch.io/sliced-fruits</li>
+              <li>License : Creative Commons BY 4.0 (CCBY4.0)</li>
+              <br>
+              <li>Ghost Sprite Pack by Master Blaster</li>
+              <li>Link: https://master-blazter.itch.io/ghostspritepack</li>
+              <br>
+              <li>Star Animation by nyknck</li>
+              <li>Link: https://nyknck.itch.io/staranimation</li>
+              <br>
+              <li>Toilet Paper</li>
+              <li>Link: https://www.hiclipart.com/free-transparent-background-png-clipart-qbxoq</li>
+              <li>License: Non-Commercial Use</li>
+              <br>
+              <li>Pixel Heart by Nicole Marie T</li>
+              <li>Link: https://nicolemariet.itch.io/pixel-heart-animation-32x32-16x16-freebie</li>
+              <br>
+              <!-- <li>Bubble by serenajeanne</li>
+              <li>Link: https://opengameart.org/content/bubble-icon</li>
+              <li>License: Create Commons BY SA 3.0</li> -->
+              <br>
+              <li>Love, Support, and MS Paint edits from Chef P.</li>
+              <br>
+            </ul>
+          </div>
+          <script>
+            function dropCredits() {
+              document.getElementById("myThanks").classList.toggle("show")
+            }
+          </script>
+        </div></li>
       </ul>
     </nav>
 
     <nav class="right-side-menu">
       <ul class="ext-links">
         <li><a href="https://github.com/ee3y0re"><button>Github</button></a></li>
-        <li><button>LinkedIn</button></li>
+        <li><a href="https://www.linkedin.com/in/abigail-montemayor/"><button>LinkedIn</button></a></li>
       </ul>
     </nav>
 

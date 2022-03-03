@@ -41,11 +41,4 @@ class Ghost {
   testHygiene() {
     console.log(this.hygiene);
   }
-
-  // possible dump
-
-  // // v2
-  
-
-  // //v1
 }

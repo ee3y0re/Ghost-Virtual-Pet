@@ -31,12 +31,13 @@ h1 {
   position: absolute;
   justify-content: space-around;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menu {
   align-items: flex-end;
-  left: -63px; //Press req -97 and lexend req -63
+  left: -60px; //Press req -97 and lexend req -63
+  z-index: 5;
 }
 
 .care {
@@ -47,34 +48,4 @@ h1 {
 
 .ext-links {
   left: 1002px;
-}
-
-button {
-  height: 46px;
-}
-
-.menu button:hover, .ext-links button:hover {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}
-
-.care button:hover {
-  background-color: pink;
-  color: black;
-
-}
-#feed:hover{
-  cursor: url("../../assets/dragonfruit_ssugmi.png"), auto;
-}
-
-#clean:hover {
-  cursor: url("../../assets/toilet-paper.png"), auto;
-}
-#love:hover {
-  cursor: url('../../assets/heart-nicole-mt.png'), auto;
-}
-
-#protect:hover{
-  cursor: url('../../assets/bubble-shield.png'), auto;
 }

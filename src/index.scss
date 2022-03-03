@@ -1,11 +1,16 @@
+@import './styles/dropdowns.scss';
+@import "./styles/buttons.scss";
 @import "./styles/dialogue.scss";
 @import "./styles/ghost.scss";
 @import "./styles/game-setting.scss";
 @import "./styles/reset.scss";
 
-body, button {
+body {
   font-family: 'Lexend', sans-serif;
-  // font-family: 'Press Start 2P', cursive;
   color: white;
   background-color: black;
+}
+
+summary, ul {
+  list-style: none;
 }

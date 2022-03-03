@@ -1,0 +1,31 @@
+button {
+  height: 46px;
+  color: white;
+  background-color: black;
+}
+
+.menu button:hover, .ext-links button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.care button:hover {
+  background-color: pink;
+  color: black;
+
+}
+#feed:hover{
+  cursor: url("../../assets/dragonfruit_ssugmi.png"), auto;
+}
+
+#clean:hover {
+  cursor: url("../../assets/toilet-paper.png"), auto;
+}
+#love:hover {
+  cursor: url('../../assets/heart-nicole-mt.png'), auto;
+}
+
+#protect:hover{
+  cursor: url('../../assets/bubble-shield.png'), auto;
+}

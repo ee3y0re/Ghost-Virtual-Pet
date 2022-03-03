@@ -1,0 +1,22 @@
+.help-info, .credits-info {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  position: absolute;
+  background-color: black;
+  opacity: 80%;
+  width: 998px;
+  left: 61px;
+  top: 1px;
+  height: 547px;
+}
+
+.help-info p, .credits ul li { //p tags in content
+  display: flex;
+  justify-content: flex-start;
+  padding: 13px;
+}
+
+.show {
+  display: flex;
+} 
