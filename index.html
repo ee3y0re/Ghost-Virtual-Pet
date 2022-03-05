@@ -44,8 +44,8 @@
     <nav class="left-side-menu">
       <ul class="menu">
         <li><div class="help-dropdown">
-          <button onclick="dropMenu()" class="help-button">Help</button>
-          <div id="myHelp" class="help-info">
+          <button id="help-button">Help</button>
+          <div id="help-info">
             <p id="exit-help">X</p>
             <ul>
             <li>Your task is to attend to the needs and whims of the Sassper... or else...</li> 
@@ -63,27 +63,14 @@
 
             </ul>
           </div>
-
-          <script>
-            function dropMenu() {
-              document.getElementById("myHelp").classList.toggle("show");
-            }
-
-            document.getElementById("exit-help").addEventListener("click", () =>{
-              document.getElementById("myHelp").classList.toggle("show");
-            });
-          </script>
-
         </div></li>
         
         <li><button id="sound">Sound</button></li>
         <li><div class="credits-dropdown">
-          <button onclick="dropCredits()" class="credits-button">Credits</button>
-          <div id="myThanks" class="credits-info">
+          <button id="credits-button">Credits</button>
+          <div id="credits-info">
             <p id="exit-credits">X</p>
             <ul>
-              <li>Acknowledgments</li>
-              <br>
               <li>Magic Scout Cottages by Kevin MacLeod</li>
               <li>Link: 
                 <a href="https://incompetech.filmmusic.io/song/4672-magic-scout-cottages">
@@ -123,17 +110,6 @@
               <br>
             </ul>
           </div>
-
-          <script>
-            function dropCredits() {
-              document.getElementById("myThanks").classList.toggle("show");
-            }
-
-            document.getElementById("exit-credits").addEventListener("click", () => {
-              document.getElementById("myThanks").classList.toggle("show");
-            });
-          </script>
-
         </div></li>
       </ul>
     </nav>

@@ -6,12 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const newGame = new Background;
   const sassper = new Ghost();
   const themeMusic = document.getElementById('theme-music');
-  var themeMusicPlaying = false;
   const scaryMusic = document.getElementById('scary-sound');
   const sassperBody = document.getElementById("ghost");
   const sassperSpeak = document.getElementById("dialogue");
   const sassperPoop = document.getElementById("poop");
   const angryGhost = document.getElementById("angry-ghost")
+
+
+  const helpButton = document.getElementById("help-button");
+  const helpInfo = document.getElementById('help-info')
+  helpButton.addEventListener("click", event => {
+    helpInfo.style.display = 'flex';
+  });
+
+  const helpExit = document.getElementById("exit-help");
+  helpExit.addEventListener("click", event => {
+    helpInfo.style.display = "none";
+  })
+
+  const creditsButton = document.getElementById("credits-button");
+  const creditsInfo = document.getElementById('credits-info')
+  creditsButton.addEventListener("click", event => {
+    creditsInfo.style.display = 'flex';
+  });
+
+  const creditsExit = document.getElementById("exit-credits");
+  creditsExit.addEventListener("click", event => {
+    creditsInfo.style.display = "none";
+  })
+
 
 
 
@@ -21,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startBox = document.getElementById("dialogue-container");
     startBox.addEventListener('click', event => {
       themeMusic.play()
-      themeMusicPlaying = true;
+      newGame.music = true;
       newGame.start = true;
       sassperSpeak.innerText = ""
       hungryCycle();
@@ -30,14 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const soundButton = document.getElementById('sound');
   soundButton.addEventListener("click", () => {
-    if (themeMusicPlaying) {
+    if (newGame.music) {
       soundButton.innerText = "Unmute";
       themeMusic.pause();
-      themeMusicPlaying = false;
+      newGame.music = false;
     } else {
       soundButton.innerText = "Mute"
       themeMusic.play();
-      themeMusicPlaying = true;
+      newGame.music = true;
     }
   });
 
@@ -134,5 +157,5 @@ document.addEventListener('DOMContentLoaded', () => {
         sassperBody.src = prevBody;
       }, 5000)
     }, 6000)
-  })
+  });
 });
