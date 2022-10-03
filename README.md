@@ -6,7 +6,7 @@ Hopefully, you won't be in disbelief or fear over this one! This game allows you
 
 
 ## Live Link:
-https://ee3y0re.github.io/Sassper-the-Sassy-Ghost/
+https://ee3y0re.github.io/sassper-the-sassy-ghost/
 
 
 ## How to Play
